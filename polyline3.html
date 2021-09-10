@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>Mapping my runs</title>
+  </head>
+
+  <body>
+    <script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js"></script>
+    <script type="text/javascript" src="https://rawgit.com/jieter/Leaflet.encoded/master/Polyline.encoded.js"></script>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css" />
+    <div id="map" style="width: 100%; height: 100%"></div>
+
+    <script>
+    var map = L.map('map').setView([48.817862, 2.218328], 13);
+    L.tileLayer(
+        'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 15,
+        }).addTo(map);
+
+    var encodedRoutes = [
+"_}ohH_~`M`@DZJl@?n@Fh@Lj@Bx@Pf@?`@H`@BxATj@NvBD`BTdBNx@RPD^?t@JdAVxABf@Hl@NxAHx@Vn@Bb@FxBLf@LlAJv@Pz@FjANv@DdARdAFr@N\\Lr@Lj@@j@LrAJRGLAfAT~BTn@JdAHpAT~@Bd@Fv@@p@LX?r@Hf@@`@BrBXV?VI\\@^Rx@D~@Nz@@b@Hj@@fALdBE|@Gb@I^Hv@C|A?dAH\\FLCTM\\Eh@FRJ^@FAHENH^DTCLGTSL?NDxBfAd@NjAXv@Vh@Ll@Xj@HbBPjBJfBPj@@n@Hf@BVANEj@g@h@ONMPLp@l@lBp@bAVjALZ@tANv@DnAPf@@bBPPAf@]JAl@b@XNp@RPBh@DjAB^FZ@hARl@BpANt@FrBRn@?AEy@BmCW}AKe@Gk@CkC_@iAImAYWKq@g@OBa@XUDuC[o@C_AMoDYcBa@_Bi@[Qe@e@OKM@GDmAbAMFSBwAOkASkAG_BQk@A{@IcAOi@YaAS{@[w@Qk@WgBaAOEMBYVe@Ji@G_ACYIY@y@NcA@k@EeAAu@Bo@MWBk@Na@@w@DuBQk@AeE_@q@[cAFqAIg@MaA?k@Go@C_@Gm@Ao@OsAEm@IWM]GQAY?u@McCQi@Gi@Kg@?{@M}@SeAGk@O_A?uAWaAEgBQa@Ia@C[GoBOk@Oa@Ce@Mm@C]EuA[]Eu@OkACwAQ[?q@K_AGm@Ku@?SCg@Ga@Wa@@g@EsAWm@O}@E[By@AOCu@[[IWCQ@[Ac@OwASi@Ca@Gq@?",
+"adqhHedaMUx@S~A[~AM~@_@~BKvBa@bCIl@BxBFTR\\ZX~AhA`@b@f@RxAZx@f@TZPh@l@fCjAhD@ROf@CTh@~AV~A^rCb@tAl@lA|@zB\\f@\\^d@z@L`@D?DGDAH@j@b@j@p@|A|ANTd@`ALb@N~@Pn@Z|Ap@~BV|ANf@b@fAj@hAb@tA`@bAH^BZCZ[tADX?NOhAKd@Up@M\\MT@LTZb@f@v@f@v@TfA|@p@jAnAlA|@pATn@ZlAr@bBf@p@t@rATZ`@`Ax@tAj@lAh@dAl@nB^n@\\`@^z@^f@Vd@Pj@Rd@~@dBNRL^LP`@\\TJrAz@d@b@t@`@l@`@f@d@`Al@l@Ft@V\\FVEh@SHAf@BFAHM?II{@UuAQq@Ii@I_@y@_CQu@Ys@w@{AsAkD]eAKg@WaA_@eCe@oBIuAWoAKqAm@wBS{AEu@Ic@Qc@e@aAa@kA[m@cAiC_@wAi@oA[o@aAiCYmAa@_Cu@oCMm@g@{Ae@aDi@cBMwBKkAQqAS_AQwAG][w@Ge@IgAk@cCI}@BMV]b@[~@mA^a@\\uA^mAHMF?RH`@`@^TZ\\RLP@n@Q^CZOF?LJTd@F?`@QBI?SGw@@ADBL?f@Il@At@Sn@]x@]Z]BQESOWaBqBOY{@gBk@eAm@gBkAwBc@kAIc@{@aCaAqBEU?IJWBSCEA@UAIEKOK]Mm@?YPmCNoDHsABoBHiA?i@Mg@o@_Ai@gA{AgCe@{@",
+"cwphHoy`MJ`AR|@B~@\\bBLfANl@T`BTJ\\FFDDRJjA@LA@YaB@M`@@JDHRJd@Jt@CrAJv@DnAXnBV`Cj@rC~@tBbCjELJ`@NZf@J@l@IzAg@z@Kf@S`AWTI~@i@f@c@Rc@`@Vx@Tn@JN?RIHGf@m@`@o@\\_@b@sANm@Rk@FGH@DBRPNT^VPJh@RH@bAIR?^QH@DHJp@l@c@?OIs@FCHBTAr@Wv@ObBcAt@s@?KmAyA_@i@yBiFq@wAWw@U_@k@uAm@cBI[_@u@s@mBK[Io@CCYMmBk@OA]H_@LK?[OY?YEsAi@MAw@L[Gg@BOCg@Yg@Ok@Ge@Bu@Og@Aa@K{@IsAFk@MSA_AOSKWEEEOSMc@EYCu@Bo@^yA^u@XoAVy@^aAXi@DSFm@Qu@R?XORSb@s@Le@PwA?QCWMc@KK]MYScCkCi@e@yAkA]e@YUi@q@{AqAI?IJg@lAc@lAGHKGu@iAq@m@oAgBs@y@QWq@{@GMCYICSDGFKTGDI@{@Oi@?KEc@[e@S]AU@q@Og@@g@e@_A{AY_@m@g@_@g@m@q@OU]SeAsA_Aw@MQQe@Wg@Su@Wc@SMWWWQw@o@m@Y][AUGYy@aBu@e@q@m@aAg@MOk@SQUQOGDu@lBIb@a@xAKT[pAAf@Eb@KZMn@ITWd@Kf@OnA?v@Gp@g@jB]tBOnAcAnDIf@_@pAIp@w@nCOn@Gd@w@vCGb@?RTbAFJn@NVJn@j@H@HMv@l@p@\\JBPAXJx@h@d@HXO`Bz@NFHCHBhA`@l@\\B@JABEJ?JBtA|@JBLAHIJABBv@j@b@NbAd@D@b@Qz@LXLd@^TFd@VPFRCb@\\RHPBHGF?xAb@Z?b@JRBbAf@hAX\\Bn@P~@n@|@\\",
+"cjqhHgfcMMg@Ie@WqDSyAGq@Q_A[_DCk@LcALk@Dk@Z}BHc@Re@JcAFaAD{CNqCLqBNmAB{@N}A?_@Ca@NmAVmA^sAJw@Tc@Ps@JWX}@\\aBPkBVcAVuA\\wAL{@VeAJq@rAoEHs@A_@I_@CKU][U{@WYOs@g@]c@M]Kw@DgAb@_BHMXu@bB}Ed@cAJ]n@aD^_DRu@n@cB`@i@^q@LOREd@JRAj@IZQhAkBdBiEtAgCl@}@lA}AVc@Pc@Zm@R[ROPWz@{Aj@mAjAsBj@uATwAXcALu@z@uDTsADy@BGTFh@CLK`@m@J}@By@L{ANw@Ti@\\_@Zm@R{@l@sAl@kAx@qAzBeCr@cA\\]XOr@W\\Eh@BREXIf@[x@]~@U`AKPKZGJEJAxAc@~AKTEVMl@QdAg@V?NFJLj@v@H^Fx@DlAMzCGr@GzAKbAIlBD|@Fb@Zj@d@f@TNj@r@t@nAr@~@R`@BLBv@BLRXRJJJFPzDdOXz@|ApG\\jAn@xCJdA@rDO~EAfBGnCBpBJ~@zAxHFj@Dp@BRTf@Lf@`@x@p@rBfC|ILX`@p@d@f@r@`@RH\\BLDr@b@p@Rd@RNNFNJXHh@N\\Zd@l@j@JJ|@b@n@d@t@Vr@b@RJZTFNATM^{@bBUp@S\\q@`EMHK?{Am@[GoAo@WEE@KRa@tAQhAo@bD[bCc@`CYdCOv@SdBe@pFi@|DQrBq@dEc@bEKf@YVIXAZLjAQpBWxBAt@I`AQ|@[~BWtAKhAMv@IVUjBWzAYxBEnAg@tDQdAWt@]bB?VJf@Bf@i@vCc@`H]dBc@bDUnAEd@QzAKpAs@zFOjBIXSVoAKQCUK_@G_BMg@MmBUg@Ao@MYA_B[w@Ge@Kg@A{@UcAQmAAkBKm@OgBM{AW_AE]Gq@Gy@Wy@QkBE]GYCaBc@}@B_AG{B[WIq@EqAa@c@AkAKk@?o@LQ?o@Uq@Ew@a@a@KWEq@SsAGc@BiACUG_@SKCYDy@Dm@NY@SEc@WKCcBCo@Gm@k@SKYGa@A[Ko@[WEKIUFkA_@o@MSM}@}@OWIY@[n@oC`@gCReBCu@Hg@DOFEf@XH@DCTq@j@wB?a@g@}@g@jCYdA[~@GXBZVT",
+"gjqhHuecMKy@Gw@My@QmBs@eFImBI_@Ea@Fy@XyAJ_Ad@_CPc@F]IkBOyB?eAHa@t@cCJo@JcATwAHgACUI[?]hAcDTcAf@iAH[N}BJw@Pq@Hm@b@eBZqBXcATgANo@Dq@b@aBp@wBFk@Ca@G]KWUY[Qs@Qq@[k@e@Wa@M_@Gi@Aa@Fm@R[XWPYj@eBn@{Bn@yAVaAXq@H]Fe@H_Al@mD\\gA\\s@f@{AN]TSTAVLZXHJR^F@HGJ[Nw@l@yANq@`AsBnBaDXk@x@mAX[zAkAHMh@iB^}@rAqC`AcBj@oALMFCNDp@h@x@t@NRdCzBxFfGl@j@VX`Ar@^\\n@x@lAr@|@r@NPPXBZGl@o@nAo@|AMRSn@mApCq@rBOXMf@CRBJp@h@Pf@Bj@GpA@LVZ`At@\\ZZd@`@v@d@n@|ApAhAx@f@f@TNf@b@n@\\d@f@PLTT^JdAx@b@d@p@d@fAbA|@`ArBfB^d@v@jAbAbCf@bCVnBUvBGRUd@[d@OXUZe@|@}@tBaAlCq@xA_@lAwA`Dm@lBe@jAg@zAo@xAIVU\\]Va@Rk@b@q@v@eAtAcDtFAHBVPZ^^b@Zb@d@d@^rAvA`BjBnAlA|@t@l@b@HJFR?RMVkAhBm@`A[t@QTIFMAaAk@SNW^Kh@QzAMd@K|@CD_@^EJ@HzAdDDV?VKf@GPONm@E[FWTWNeBv@i@f@uA`AY\\cAf@G?SS{@cBWYk@aAi@u@q@mAoAwAc@o@sAwAkBkAGD_@nAUf@YdAYj@Sh@W~@w@tBw@hBc@pBCZBn@f@lCl@tBxA`Dd@x@f@dAr@bAnAzBh@t@Xh@bClFJXVjAZv@v@xCBNCHCBK@{@SSAYD[PSBQE[Se@ImA_@I@g@JU@cAOwAg@u@Ea@@QA",
+"gnqhHwwbMi@g@qAqBgAcAaAoAa@s@a@}@i@k@c@mAu@iAWWSMu@q@y@y@u@iAu@}@g@w@q@_@u@y@w@_@USe@Si@_@IOOc@OSMc@IAi@@KHKTUxASh@c@jBc@fC[rA_B`JUr@o@hD}@`Eq@~BMh@c@tAMz@Mb@Oz@S\\OHKSIa@ECMPQf@_@dBQbCO\\EDM@MAUIg@[o@UwA_@y@[MEY?YDi@Dq@EIHGR_@hCOPO@a@Uk@g@_@We@Sc@Y[OaBc@c@SgAUa@Qo@Qq@]mB_@k@Iq@SS?GDCDEVGdDOl@APDrDC\\ILKF]Fs@XWRa@f@iAhBYx@YbA[xAIdAC`CG\\MVWDo@F_AVs@Tu@NkBl@}@RsEpAkAZ{B^k@Rk@Fk@Te@NMHGVDjAdA~IJfBFd@R~CN~@AfALv@JpADrAF|@BhAAfAO`ACnAFLVNnAPxDtAVPVh@H`@Fv@L~@XfCBh@Jj@Fj@H`@NlAZ~An@|EBp@LbADp@TnAB`@F\\LpA@`@R`APd@ZzAZfAh@|APTTNn@Zd@JTBb@A`@Dt@Gx@Fh@CL@THDDLb@LPPNHAJGHUDOBi@BKFKx@}@lAcAt@i@VYn@k@v@a@`CsBlAgAfAw@hAmAv@i@`A}@RG`@HLADEXe@r@s@v@cARMl@]\\Wv@g@^YPKl@O\\Gp@@vCh@p@RtAVtAZJ?VK^ClAJ`@NNAP@fB\\PHb@XXHh@H\\AR@z@TJCtCiCx@g@JOn@wAf@iBnAgCr@gBh@{A\\oAPc@^k@j@o@x@s@p@c@b@OTQfAaCNs@DK`AgAHQVq@VaAFw@@wAAmAOmB@k@t@kDZw@DCD@tAb@pC^P?TM^}@REl@NdAL`AB^J~@R^BzAAd@BJGHKVu@@IKw@@ULWROz@]p@c@z@_@NOHsBH}@",
+"_~phHgwcM[k@w@y@KQUy@A]HmBh@uGXmBFyAd@mF@a@ELO|C[fDEhAs@nISfBAh@FXR^h@j@Zb@|CvDP^@NKr@i@hBWnAi@~CqAlISlBCfADLDH~@x@d@h@j@v@hAnAz@rAdBlBv@rAd@d@h@p@h@f@BMFGR?LJLZJJD@RMr@El@AVCLGN@VCPJPXT?LBXZ?^CP_@bAGLEBSz@Un@EDWBGJCHD\\AX_@`As@dCWhAW|@g@vCGROLm@HcAC_AD_@C[IW@MCIOCSHoAAUEMOQg@WkASwAiAw@_@_AaAWM_@Gc@Wc@Qc@a@k@]]e@u@[]YY_@[k@UUaAw@EKh@cAhAmEBIHIJBPRL`@BNMr@k@rBMTE@[SSWGCEDQfA@HFH|Az@dDhCJ@FIfAmEX]?QSk@Km@KoAKo@c@_DUyBEEa@NQAwCgDeAcAs@}@MWB]Ru@L_CR{AVaDVkBVmAR]NIH@HDN^P~B"
+  ]
+
+    for (let encoded of encodedRoutes) {
+      var coordinates = L.Polyline.fromEncoded(encoded).getLatLngs();
+
+      L.polyline(
+          coordinates,
+          {
+              color: 'blue',
+              weight: 8,
+              opacity: 1,
+              lineJoin: 'round'
+          }
+      ).addTo(map);
+    }
+    </script>
+  </body>
+</html>
